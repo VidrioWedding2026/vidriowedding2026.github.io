@@ -1,211 +1,613 @@
-<!DOCTYPE HTML>
-<!--
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Arath Vidrio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Emma & Liam — Our Wedding</title>
+    <meta
+      name="description"
+      content="Emma & Liam are getting married — all the details for our wedding day, travel, RSVP, and registry."
+    />
+    <!-- Google fonts: Playfair Display (serif) for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page">
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Emma and Liam wedding home">
+          <!-- Replace with monogram/logo image; alt explains intended content -->
+          <img
+            src="images/monogram-placeholder.png"
+            alt="Monogram logo (replace with couple's initials monogram)"
+            class="brand-logo"
+          />
+          <span class="brand-text">Emma &amp; Liam</span>
+        </a>
+        <button
+          class="nav-toggle"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          id="nav-toggle"
+        >
+          <span class="sr-only">Open menu</span>
+          ☰
+        </button>
 
-		<!-- Header -->
-			<header id="header">
-				<h1>Arath Vidrio</h1>
-				<nav>
-					<ul>
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#one">What I Do</a></li>
-						<li><a href="#two">Who I Am</a></li>
-						<li><a href="#work">My Work</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</header>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="#our-story">Our Story</a>
+          <a href="#details">Details</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#rsvp" id="rsvp-desktop">RSVP</a>
+        </nav>
+      </div>
+    </header>
 
-		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content">
-					<header>
-						<h2 id="myname">Arath Vidrio</h2>
-					</header>
-					<p>I am a Full Stack Software Engineer.<br />
-					I've worked on everything from from back-end servers, databases,
-				API's,<br /> to front-end responsive and great looking webpages,<br />
-				putting it all together into a sweet package to make a great and seamless user experience.
-				</p>
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
-				</div>
-			</section>
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-media">
+          <!-- Replace hero image; alt describes intent -->
+          <img
+            src="images/hero-photo.jpg"
+            alt="Hero photograph of the couple at sunset — replace with your hero image"
+            class="hero-image"
+          />
+        </div>
+        <div class="hero-content container">
+          <h1 id="hero-heading" class="hero-title">Emma &amp; Liam</h1>
+          <p class="hero-subtitle">
+            Join us as we exchange vows<br /><strong
+              >Saturday, October 12, 2025</strong
+            >
+          </p>
 
-		<!-- One -->
-			<section id="one" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>What I Do</h2>
-					</header>
-					<img id="my-pic"src="images/arath.png"></img>
-					<p>I've worked with JavaScript, (vanilla, React/Redux, jQuery, Express).
-						As well as Python, Flask, SQL, PostgreSQL, SQLAlchemy, RethinkDB, HTML5, CSS3, SCSS, Github Co-Pilot, Cold-Fusion,
-						creating and incorporated APIs through a veriety of SQL based databases, have used and incorporated Amazon Web Services (AWS),
-						and I am always expanding my skillset. <a href="/images/Vidrio_Arath_Resume.pdf" target="_blank">View my full resume here.</a>
-					</p>
-				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
-			</section>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="open-rsvp">RSVP</button>
+            <a class="btn btn-ghost" href="#details">Details</a>
+          </div>
 
-		<!-- Two -->
-			<section id="two" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Who I Am</h2>
-					</header>
-					<p>I love seeing things from a different perspective, 
-					I seek to bring the technical and creative together to build delightful, 
-					intuitive experiences. I think outside the box to bring creative solutions
-					to the table. I am someone who never gives up. From very humble beginings, in 
-					the face of overwhelming adversity to where I am now, I have worked my way up,
-					and have no intentions of stopping.
-					</p>
-				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
-			</section>
+          <div
+            class="countdown"
+            aria-live="polite"
+            data-date="2025-10-12T15:00:00-07:00"
+            id="countdown"
+          >
+            <!-- JS populates countdown -->
+            <div class="countdown-item">
+              <span class="countdown-value" id="cd-days">0</span
+              ><span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="cd-hours">0</span
+              ><span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="cd-mins">0</span
+              ><span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="cd-secs">0</span
+              ><span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-		<!-- Work -->
-			<section id="work" class="main style3 primary">
-				<div class="content">
-					<header>
-						<h2>My Work</h2>
-						<p>See examples of my work below.</p>
-					</header>
+      <!-- OUR STORY -->
+      <section id="our-story" class="section container">
+        <div class="grid-2">
+          <div>
+            <h2 class="section-title">Our Story</h2>
+            <p class="lede">
+              We met on a rainy afternoon and found sunshine in one another's
+              company. (Replace this paragraph with a brief, personal story
+              about how you met, the proposal, and a warm invitation to join
+              you.)
+            </p>
+            <p class="muted">
+              We can't wait to celebrate with you. Please check details below
+              and RSVP at your earliest convenience.
+            </p>
+            <a class="link" href="#gallery">See photos &raquo;</a>
+          </div>
+          <div class="portrait">
+            <!-- Replace with a portrait of the couple -->
+            <img
+              src="images/portrait.jpg"
+              alt="Portrait of Emma & Liam (replace with couple portrait)"
+              class="rounded"
+            />
+          </div>
+        </div>
+      </section>
 
-					<!-- Gallery  -->
-					<div>
-						<div class="gallery">
-							<article class="from-left">
-								<a href="images/thumbs/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="Instafake" alt="" /></a>
-							</article>
-							<article class="from-right">
-								Instafake is an Instagram clone, it starts off on a Login page,
-								Signup is possible with passwords being fully encrypted when stored in the 
-								database (SQLAlchemy), the back-end utilizes Python, Flask, and the entire application 
-								is containerized in a docker container.  Front-end technologies include
-								React.js / Redux.js. Front-end makes calls to the back-end API to create, render, update and delete data (CRUD).
-								When a user is logged in, they can like or comment on their 
-								friends' recent posts, they can also search for friends as well as follow/unfollow them 
-								as they please.
-	
-							</article>
-							<article class="from-left">
-							When users post an image, this gets stored on Amazon Web Services (AWS), allowing for
-							a full and dynamic user experience. The entirety of the website utilizes cutting edge
-							algorithms and programming best practices to ensure a page refresh is never needed, thus,
-							improving speed, reliability and ultimately, user experience.<br />
-							Multiple modals are also utilized throughout the website to allow the user to access the website's
-							full potential without having to navigate away from a page they were on.
-							</article>
-							<article class="from-right">
-								<a href="images/thumbs/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Instafake" alt="" /></a>
-							</article>
-						</div>
-						<div><a href="https://instafake2021.herokuapp.com/" target="_blank" >Visit Instafake by clicking here.</a></div>
-					</div>
+      <!-- DETAILS -->
+      <section id="details" class="section alt-bg">
+        <div class="container">
+          <h2 class="section-title">Details</h2>
 
-					<br />
-					<br />
-					<br />
+          <div class="info-grid">
+            <article class="info-card" aria-labelledby="venue-title">
+              <h3 id="venue-title">Venue</h3>
+              <p class="muted">
+                St. Cecilia Chapel — 123 Garden Lane, Sonoma, CA.
+              </p>
+              <!-- Replace with venue photo -->
+              <img
+                src="images/venue.jpg"
+                alt="Venue photo placeholder: main ceremony venue facade (replace with venue photo)"
+                class="info-image"
+              />
+              <p>
+                Ceremony begins at 3:00 PM. Reception immediately following at
+                The Orchard next door.
+              </p>
+              <p><strong>Dress code:</strong> Cocktail attire</p>
+              <p>
+                <a
+                  class="link"
+                  href="https://maps.google.com"
+                  target="_blank"
+                  rel="noopener"
+                  >Open in maps</a
+                >
+              </p>
+            </article>
 
-					<div>
-						<div class="gallery">
-							<article class="from-left">
-								<a href="images/thumbs/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="DrinkReviews"
-										alt="" /></a>
-							</article>
-							<article class="from-right">
-								DrinkReviews is a website, loosely based on Yelp. The back-end utilizes Node.js, Express.js and Sequelize/PostgreSQL, and the front-end
-								utilizes React.js/Redux.js and makes calls to the back-end API to create, render, update and delete data(CRUD).
-								<br />
-								The website may be utilized by any user, and you do not have to be 
-								logged in to view reviews/ search for drinks. However, you do have to be logged in, to
-								post any drink or review.
-					
-							</article>
-							<article class="from-left">
-								When non-logged in users attempt to post a new drink or review, a login modal appears,
-								making them log in, or signed up before posting.
-								<br />When a user posts a drink, they upload a photo of the drink, this gets stored on 
-								Amazon Web Services (AWS), providing our user a seamless experience. Thanks to React/Redux, as well
-								as the most cutting edge algorithms and programming best practices, the entirety of the website 
-								can be utilized to it's full potential without ever needing a page refresh. This ensures speed,
-								reliability and ultimately a great user experience.
-							</article>
-							<article class="from-right">
-								<a href="images/thumbs/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="DrinkReviews"
-										alt="" /></a>
-							</article>
-						</div>
-						<div><a href="https://drinkreviews.herokuapp.com/" target="_blank">Visit DrinkReviews by clicking here.</a></div>
-					</div>
+            <article class="info-card" aria-labelledby="travel-title">
+              <h3 id="travel-title">Travel &amp; Accommodations</h3>
+              <p class="muted">
+                Curated hotel room blocks and transit tips for out-of-town
+                guests.
+              </p>
+              <ul>
+                <li>Hotel A — mention block code here</li>
+                <li>Hotel B — shuttle available</li>
+              </ul>
+              <p>
+                <strong>Shuttle:</strong> A complimentary shuttle will run
+                between main hotels and the venue.
+              </p>
+            </article>
 
-				</div>
-			</section>
+            <article class="info-card" aria-labelledby="registry-title">
+              <h3 id="registry-title">Registry &amp; Gifts</h3>
+              <p class="muted">
+                Your presence is our greatest gift. If you'd like to give, we
+                are registered at:
+              </p>
+              <ul class="registry-list">
+                <li>
+                  <a class="link" href="#" target="_blank" rel="noopener"
+                    >Registry 1</a
+                  >
+                </li>
+                <li>
+                  <a class="link" href="#" target="_blank" rel="noopener"
+                    >Registry 2</a
+                  >
+                </li>
+              </ul>
+            </article>
 
-		<!-- Contact -->
-			<section id="contact" class="main style3 secondary">
-				<div class="content">
-					<header>
-						<h2>Say Hello.</h2>
-						<p>Email me at arathvidrio@gmail.com <br />
-						or contact me on <a href="https://www.linkedin.com/in/arath-vidrio-4b0656216" target="_blank" >LinkedIn</a>
-						</p>
-					</header>
-					<!-- <div class="box">
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-							</div>
-							<ul class="actions special">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-					</div> -->
-				</div>
-			</section>
+            <article class="info-card" aria-labelledby="faq-title">
+              <h3 id="faq-title">FAQ</h3>
+              <div class="accordion" id="faq">
+                <button class="accordion-toggle" aria-expanded="false">
+                  Can I bring a plus-one?
+                </button>
+                <div class="accordion-panel">
+                  If a plus-one is listed on your invitation, yes — otherwise
+                  please check with the hosts.
+                </div>
 
-		<!-- Footer -->
-			<footer id="footer">
+                <button class="accordion-toggle" aria-expanded="false">
+                  Is the event kid-friendly?
+                </button>
+                <div class="accordion-panel">
+                  We love your little ones but encourage adult-only attendance
+                  for the reception. Please see your invitation for details.
+                </div>
 
-				<!-- Icons -->
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/arath-vidrio-4b0656216" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/arath1869" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					</ul>
+                <button class="accordion-toggle" aria-expanded="false">
+                  Accessibility?
+                </button>
+                <div class="accordion-panel">
+                  The venue is wheelchair-accessible. Contact us for additional
+                  arrangements.
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; Arath Vidrio</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-					</ul>
+      <!-- SCHEDULE -->
+      <section id="schedule" class="section container">
+        <h2 class="section-title">Schedule</h2>
+        <ol class="timeline">
+          <li>
+            <time datetime="2025-10-12T14:00">2:00 PM</time> Guests arrive /
+            welcome drinks
+          </li>
+          <li><time datetime="2025-10-12T15:00">3:00 PM</time> Ceremony</li>
+          <li>
+            <time datetime="2025-10-12T16:00">4:00 PM</time> Cocktail hour
+          </li>
+          <li>
+            <time datetime="2025-10-12T17:00">5:00 PM</time> Reception & dinner
+          </li>
+        </ol>
+      </section>
 
-			</footer>
+      <!-- GALLERY -->
+      <section id="gallery" class="section alt-bg">
+        <div class="container">
+          <h2 class="section-title">Gallery</h2>
+          <p class="muted">A few moments from our story — more to come.</p>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+          <div class="gallery-grid" id="gallery-grid">
+            <!-- Replace with gallery images -->
+            <button
+              class="gallery-item"
+              data-src="images/gallery1.jpg"
+              aria-label="Open image: engagement photo 1"
+            >
+              <img
+                src="images/gallery1-thumb.jpg"
+                alt="Engagement photo placeholder 1 (replace with image)"
+              />
+            </button>
+            <button
+              class="gallery-item"
+              data-src="images/gallery2.jpg"
+              aria-label="Open image: engagement photo 2"
+            >
+              <img
+                src="images/gallery2-thumb.jpg"
+                alt="Engagement photo placeholder 2 (replace with image)"
+              />
+            </button>
+            <button
+              class="gallery-item"
+              data-src="images/gallery3.jpg"
+              aria-label="Open image: engagement photo 3"
+            >
+              <img
+                src="images/gallery3-thumb.jpg"
+                alt="Engagement photo placeholder 3 (replace with image)"
+              />
+            </button>
+            <button
+              class="gallery-item"
+              data-src="images/gallery4.jpg"
+              aria-label="Open image: engagement photo 4"
+            >
+              <img
+                src="images/gallery4-thumb.jpg"
+                alt="Engagement photo placeholder 4 (replace with image)"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
 
-	</body>
+      <!-- RSVP (modal-trigger anchor) -->
+      <section id="rsvp" class="section container">
+        <h2 class="section-title">RSVP</h2>
+        <p class="muted">
+          Please let us know if you'll be able to join our celebration.
+        </p>
+        <button class="btn btn-primary" id="open-rsvp-2">
+          Respond to the invitation
+        </button>
+        <p class="fineprint">
+          Prefer to RSVP by phone or email? Contact:
+          <a class="link" href="mailto:hello@example.com">hello@example.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer alt-bg">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> Emma &amp; Liam — We look forward to
+          celebrating with you.
+        </p>
+        <p class="muted">
+          Site template — replace content and images. Built with timeless design
+          in mind.
+        </p>
+      </div>
+    </footer>
+
+    <!-- RSVP Modal -->
+    <div
+      id="modal-rsvp"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="modal-rsvp-title"
+    >
+      <div class="modal-content">
+        <button
+          class="modal-close"
+          id="close-rsvp"
+          aria-label="Close RSVP dialog"
+        >
+          &times;
+        </button>
+        <h3 id="modal-rsvp-title">RSVP</h3>
+        <form id="rsvp-form" class="rsvp-form" novalidate>
+          <label for="guest-name">Full name</label>
+          <input
+            id="guest-name"
+            name="name"
+            type="text"
+            required
+            placeholder="Your full name"
+          />
+
+          <label for="guest-email">Email</label>
+          <input
+            id="guest-email"
+            name="email"
+            type="email"
+            required
+            placeholder="you@example.com"
+          />
+
+          <label for="guest-attending" class="label-inline"
+            >Will you attend?</label
+          >
+          <select id="guest-attending" name="attending" required>
+            <option value="">Select</option>
+            <option value="yes">Yes — we will attend</option>
+            <option value="no">No — sending our love</option>
+          </select>
+
+          <label for="guest-qty">Number of guests (including you)</label>
+          <input id="guest-qty" name="qty" type="number" min="1" value="1" />
+
+          <label for="guest-diet">Dietary restrictions (optional)</label>
+          <input
+            id="guest-diet"
+            name="diet"
+            type="text"
+            placeholder="Allergies, vegetarian, etc."
+          />
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Submit RSVP</button>
+            <button class="btn btn-ghost" type="button" id="rsvp-cancel">
+              Cancel
+            </button>
+          </div>
+
+          <p class="rsvp-status" id="rsvp-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Lightbox Modal for gallery -->
+    <div
+      id="modal-lightbox"
+      class="modal lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <button
+          class="modal-close"
+          id="close-lightbox"
+          aria-label="Close image viewer"
+        >
+          &times;
+        </button>
+        <img id="lightbox-image" src="" alt="" />
+        <p id="lightbox-caption" class="muted"></p>
+      </div>
+    </div>
+
+    <script>
+      // Basic interactive behaviors
+
+      // DOM helpers
+      const $ = (sel, ctx = document) => ctx.querySelector(sel);
+      const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+
+      // mobile nav toggle
+      const navToggle = $("#nav-toggle");
+      const siteNav = $("#site-nav");
+      navToggle.addEventListener("click", () => {
+        const expanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", !expanded);
+        siteNav.classList.toggle("open");
+      });
+
+      // Smooth scrolling for internal links
+      $$('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const target = document.querySelector(a.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            // close mobile nav if open
+            if (siteNav.classList.contains("open")) {
+              siteNav.classList.remove("open");
+              navToggle.setAttribute("aria-expanded", "false");
+            }
+          }
+        });
+      });
+
+      // Set year
+      $("#year").textContent = new Date().getFullYear();
+
+      // Countdown timer
+      (function initCountdown() {
+        const el = $("#countdown");
+        if (!el) return;
+        const target = new Date(el.dataset.date);
+        const daysEl = $("#cd-days");
+        const hoursEl = $("#cd-hours");
+        const minsEl = $("#cd-mins");
+        const secsEl = $("#cd-secs");
+
+        function tick() {
+          const now = new Date();
+          const diff = Math.max(0, target - now);
+          const secs = Math.floor(diff / 1000) % 60;
+          const mins = Math.floor(diff / (1000 * 60)) % 60;
+          const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          daysEl.textContent = days;
+          hoursEl.textContent = hours.toString().padStart(2, "0");
+          minsEl.textContent = mins.toString().padStart(2, "0");
+          secsEl.textContent = secs.toString().padStart(2, "0");
+          if (diff <= 0) clearInterval(timer);
+        }
+        tick();
+        const timer = setInterval(tick, 1000);
+      })();
+
+      // Modal helpers
+      function openModal(modal) {
+        modal.setAttribute("aria-hidden", "false");
+        modal.classList.add("open");
+        document.body.classList.add("modal-open");
+        // focus first input if present
+        const input = modal.querySelector("input, select, button, textarea");
+        if (input) input.focus();
+      }
+      function closeModal(modal) {
+        modal.setAttribute("aria-hidden", "true");
+        modal.classList.remove("open");
+        document.body.classList.remove("modal-open");
+      }
+
+      // RSVP modal logic (client-side)
+      const modalRsvp = $("#modal-rsvp");
+      const openRsvpButtons = [
+        $("#open-rsvp"),
+        $("#open-rsvp-2"),
+        $("#rsvp-desktop"),
+      ].filter(Boolean);
+      openRsvpButtons.forEach((btn) =>
+        btn.addEventListener("click", () => openModal(modalRsvp))
+      );
+      $("#close-rsvp").addEventListener("click", () => closeModal(modalRsvp));
+      $("#rsvp-cancel").addEventListener("click", () => closeModal(modalRsvp));
+
+      const rsvpForm = $("#rsvp-form");
+      const rsvpStatus = $("#rsvp-status");
+
+      // Load saved RSVP if exists
+      (function loadSaved() {
+        try {
+          const saved = localStorage.getItem("wedding_rsvp");
+          if (saved) {
+            const data = JSON.parse(saved);
+            $("#guest-name").value = data.name || "";
+            $("#guest-email").value = data.email || "";
+            $("#guest-attending").value = data.attending || "";
+            $("#guest-qty").value = data.qty || 1;
+            $("#guest-diet").value = data.diet || "";
+            rsvpStatus.textContent =
+              "We have your previous RSVP loaded locally. Update & submit to save changes.";
+          }
+        } catch (e) {
+          /* ignore */
+        }
+      })();
+
+      rsvpForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = {
+          name: $("#guest-name").value.trim(),
+          email: $("#guest-email").value.trim(),
+          attending: $("#guest-attending").value,
+          qty: $("#guest-qty").value,
+          diet: $("#guest-diet").value.trim(),
+          submittedAt: new Date().toISOString(),
+        };
+        if (!formData.name || !formData.email || !formData.attending) {
+          rsvpStatus.textContent =
+            "Please complete name, email, and attending fields.";
+          return;
+        }
+        try {
+          localStorage.setItem("wedding_rsvp", JSON.stringify(formData));
+          rsvpStatus.textContent = "Thank you — your RSVP is saved locally.";
+          // visual confirmation then close
+          setTimeout(() => closeModal(modalRsvp), 900);
+        } catch (err) {
+          rsvpStatus.textContent =
+            "Unable to save RSVP locally. Please email us at hello@example.com.";
+        }
+      });
+
+      // Gallery lightbox
+      const galleryGrid = $("#gallery-grid");
+      const lightbox = $("#modal-lightbox");
+      const lbImage = $("#lightbox-image");
+      const lbCaption = $("#lightbox-caption");
+
+      galleryGrid &&
+        galleryGrid.addEventListener("click", (ev) => {
+          const btn = ev.target.closest(".gallery-item");
+          if (!btn) return;
+          const src = btn.dataset.src;
+          const img = btn.querySelector("img");
+          lbImage.src = src;
+          lbImage.alt = img ? img.alt : "Gallery image";
+          lbCaption.textContent = img ? img.alt : "";
+          openModal(lightbox);
+        });
+
+      $("#close-lightbox").addEventListener("click", () =>
+        closeModal(lightbox)
+      );
+
+      // Close modals on ESC
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          [modalRsvp, lightbox].forEach((m) => {
+            if (m && m.classList.contains("open")) closeModal(m);
+          });
+        }
+      });
+
+      // FAQ accordion toggles
+      $$(".accordion-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", !expanded);
+          const panel = btn.nextElementSibling;
+          if (!panel) return;
+          if (!expanded) {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } else {
+            panel.style.maxHeight = null;
+          }
+        });
+        // init panels to collapsed
+        const p = btn.nextElementSibling;
+        if (p) p.style.maxHeight = null;
+      });
+
+      // Simple focus style for keyboard users (accessibility)
+      document.body.addEventListener("keyup", (e) => {
+        if (e.key === "Tab") document.body.classList.add("show-focus");
+      });
+    </script>
+  </body>
 </html>
